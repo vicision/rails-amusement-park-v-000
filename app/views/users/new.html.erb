@@ -1,0 +1,53 @@
+<h1>
+    New User
+</h1>
+
+<%= form_for :user, :html => {:class => "field"} do |f| %>
+    
+    <div class="field">
+        <%= f.label :name %>
+        <br>
+        <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+        <%= f.label "Height (in inches)" %>
+        <br>        
+        <%= f.text_field :height %>
+    </div>
+
+    <div class="field">
+        <%= f.label "My happiness level (1-5 scale)" %>
+        <br>        
+        <%= f.text_field :happiness %>
+    </div>
+
+    <div class="field">
+        <%= f.label "My nausea level (1-5 scale)" %>
+        <br>        
+        <%= f.text_field :nausea %>           
+    </div>
+
+    <div class="field">
+        <%= f.label "How much money I have on me" %>
+        <br>        
+        <%= f.text_field :tickets %>   
+    </div>
+
+    <div class="field">
+        <%= f.label "I am a theme park owner" %>
+        <br>        
+        <%= f.check_box :admin %>
+    </div>
+
+    <div class="field">
+        <%= f.label :password %>
+        <br>        
+        <%= f.text_field :password %>
+    </div>
+
+    <div class="field">
+        <%= f.submit "Create User" %>
+    </div>
+
+<% end %>
