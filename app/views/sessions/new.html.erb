@@ -11,12 +11,14 @@
 
 
 <%= form_for @user, url: signin_path do |f| %>
-  <%= f.label :name, "Select your name" %>
-  <%= f.select :name, User.pluck(:name), { multiple: true, size: 9 } %> <br>  
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br>
+  <!-- <%= f.label :name, "Select your name" %> # Approximates sample page --> 
+  <!-- <%= f.select :name, User.pluck(:name), { multiple: true, size: 9 } %> <br> # Approximates the sample page  -->
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-  <%= f.submit 'sign in' %>
-  <%= button_to 'sign up', signup_path %>
+  <%= f.submit 'Sign In' %>
+  <%= button_to 'Sign up', signup_path %>
 <% end %>
   
   
