@@ -17,7 +17,7 @@ class AttractionsController < ApplicationController
   end
 
   def show
-    @attraction = current_user.rides.find(params[:id])
+    @attraction = Attraction.find(params[:id])
   end
 
   private
