@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'attractions/index'
+  # get 'attractions/index'
 
-  get 'attractions/show'
+  # get 'attractions/show'
 
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
+  
+  get'/logout' => 'sessions#destroy'
 
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
