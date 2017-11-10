@@ -26,7 +26,7 @@
            <!--  nav here -->
            <% if logged_in? %>
             <li><%= link_to "Hello, #{current_user.name}!" %></li>
-            <li><%= link_to "Attractions", "/attractions/index" %></li>
+            <li><%= link_to "Attractions", "/attractions" %></li>
             <li><%= link_to "Log Out", "/logout" %></li>
             <% else %>
             <li><%= link_to "Sign Up", "/users/new" %></li>

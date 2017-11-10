@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'attractions/index'
-
-  # get 'attractions/show'
-
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   
@@ -11,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
+
+  post '/rides/new' => 'rides#create'
 
   resources :users
   resources :attractions

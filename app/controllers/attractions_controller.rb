@@ -25,4 +25,5 @@ class AttractionsController < ApplicationController
   def attraction_params
     params.require(:attraction).permit(:name, :tickets, :nausea_rating, :happiness_rating, :min_height)
   end
+  
 end

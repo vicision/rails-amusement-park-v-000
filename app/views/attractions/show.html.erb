@@ -4,15 +4,22 @@
   </div>
 
   <div class="info">
+    <p><strong>Name:</strong><%= @attraction.name %></p>
+    <p><strong>Total Number of Users:</strong><%= @attraction.users.count %></p>
+    <p><strong>Ticket Requirement:</strong><%= @attraction.tickets %></p>    
+    <p><strong>Height Requirement:</strong><%= @attraction.min_height %></p>
+    <p><strong>Nausea Rating:</strong><%= @attraction.nausea_rating %></p>
+    <p><strong>Happiness Rating:</strong><%= @attraction.happiness_rating %></p>    
     <% if current_user.admin %>
-      <p><strong>ADMIN</strong></p>
+      <p><%= link_to "Edit Attraction", "/attractions/#{@attraction.id}/edit" %></p>
+    <% else %>
+    <%= form_for :ride, :html => {:class => "field"}, :url => "/rides/new", method: :post do |f| %>
+      <%= f.submit "Go on this ride" %>
     <% end %>
-    <p><strong>Name:</strong><%= @user.name %></p>
-    <p><strong>Total Number of Users:</strong><%= @user.tickets %></p>
-    <p><strong>Mood:</strong><%= @user.mood %></p>
-    <p><strong>Height:</strong><%= @user.height %></p>
-    <p><a href="/users/#{@user.id}/edit">Edit</a></p>
-    <p><a href="/attractions">See attractions</a></p>
+      <!-- <p><%= link_to "Go on this ride", "/users/#{current_user.id}" %></p>
+    <% end %> -->
+
+    <p><a href="/attractions">Back</a></p>
   </div>
 </div>
   

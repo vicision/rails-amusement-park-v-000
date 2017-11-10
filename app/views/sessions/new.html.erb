@@ -10,7 +10,7 @@
   </form> -->
 
 
-<%= form_for @user, url: signin_path do |f| %>
+<%= form_for @user, :url => signin_path do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %> <br>
   <!-- <%= f.label :name, "Select your name" %> # Approximates sample page --> 
