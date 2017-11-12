@@ -13,11 +13,10 @@
     <% if current_user.admin %>
       <p><%= link_to "Edit Attraction", "/attractions/#{@attraction.id}/edit" %></p>
     <% else %>
-    <%= form_for :ride, :html => {:class => "field"}, :url => "/rides/new", method: :post do |f| %>
+      <%= form_for :ride, :html => {:class => "field"}, :url => "/rides/new", method: :post do |f| %>
       <%= f.submit "Go on this ride" %>
+      <% end %>
     <% end %>
-      <!-- <p><%= link_to "Go on this ride", "/users/#{current_user.id}" %></p>
-    <% end %> -->
 
     <p><a href="/attractions">Back</a></p>
   </div>
