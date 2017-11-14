@@ -1,11 +1,11 @@
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
 <div class="center">
   <div class="pic">
     <img src="http://8900-presscdn-0-84.pagely.netdna-cdn.com/wp-content/themes/beautycon/assets/img/avatar-grey.png" height="250">
   </div>
-
-  <% if @message %>
-    <p><%= @message %></p>
-  <% end %>
 
   <div class="info">
     <% if current_user.admin %>
