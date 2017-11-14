@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
 
-  post '/rides/new' => 'rides#create'
+  post '/rides/new' => 'rides#new'
 
   resources :users
   resources :attractions

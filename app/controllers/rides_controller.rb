@@ -5,8 +5,9 @@ class RidesController < ApplicationController
   end
 
   def create
-    @ride = Ride.create(:user_id => params[:user_id], :attraction_id => params[:attraction_id])
-    # @ride.take_ride
-    redirect_to "/users/#{current_user.id}"
+    @ride = Ride.new(:user_id => params[:user_id], :attraction_id => params[:attraction_id])
+    @ride.save
+    @ride.take_ride
+    redirect_to user_path(@ride.user)
   end
 end
