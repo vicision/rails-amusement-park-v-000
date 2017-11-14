@@ -3,15 +3,18 @@
     <img src="http://8900-presscdn-0-84.pagely.netdna-cdn.com/wp-content/themes/beautycon/assets/img/avatar-grey.png" height="250">
   </div>
 
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+
   <div class="info">
     <% if current_user.admin %>
       <p><strong>ADMIN</strong></p>
     <% end %>
-    <p><strong>Name:</strong><%= @user.name %></p>
-    <p><strong>Tickets:</strong><%= @user.tickets %></p>
-    <p><strong>Mood:</strong><%= @user.mood %></p>
-    <p><strong>Height:</strong><%= @user.height %></p>
-    <p><a href="/users/#{@user.id}/edit">Edit</a></p>
+    <p><strong>Name: </strong><%= @user.name %></p>
+    <p><strong>Tickets: </strong><%= @user.tickets %></p>
+    <p><strong>Mood: </strong><%= @user.mood %></p>
+    <p><strong>Height: </strong><%= @user.height %></p>
     <p><a href="/attractions">See attractions</a></p>
   </div>
 </div>
